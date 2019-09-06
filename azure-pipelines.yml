@@ -24,12 +24,12 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
   
   - task: DotNetCoreCLI@2
-   displayname: 'creating a package *****--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-   inputs:
-    command: publish
-    publishwebprojects: false
-    projects: '/src/SimpleAPI/simpleAPI.csproj'
-    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    displayname: 'creating a package *****--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    inputs:
+     command: publish
+     publishwebprojects: false
+     projects: '/src/SimpleAPI/simpleAPI.csproj'
+     arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
     
   - task: PublishBuildArtifacts@1
     displayname: 'Publish Artifacts'
