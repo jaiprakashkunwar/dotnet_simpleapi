@@ -24,7 +24,7 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
   
 - task: DotNetCoreCLI@2
-    inputs:
+  inputs:
      command: publish
      publishwebprojects: false
      projects: '/src/SimpleAPI/simpleAPI.csproj'
